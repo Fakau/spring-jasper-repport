@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="person_list" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5b35016d-b438-4b8b-b2e2-22100d270d4e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="ds" uuid="fb345432-376c-4344-aa18-b8821387bd9b">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="id" class="java.lang.Long"/>
+		<field name="name" class="java.lang.String"/>
+		<field name="prenom" class="java.lang.String"/>
+		<field name="email" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="ds" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource">
+		<defaultValueExpression><![CDATA[$P{ds}]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="41" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="11" width="550" height="30" uuid="d50c1b40-dd72-49a7-9525-7177a70d9ff7"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[List of employes]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="68" splitType="Stretch">
+			<componentElement>
+				<reportElement x="0" y="0" width="550" height="60" uuid="f9fec20a-3747-490e-95cb-60c2a5826321">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="ds" uuid="9932e6b0-702f-4649-8ba5-6a1eb18c3656">
+						<dataSourceExpression><![CDATA[$P{ds}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="60" uuid="fc1f2fef-7dc3-450b-bd48-a16988832c3a">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="60" height="30" uuid="ccffedbf-c120-44e0-a78c-c855591c9def"/>
+								<textElement>
+									<font size="12"/>
+								</textElement>
+								<text><![CDATA[Id]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="60" height="30" uuid="6f8a675f-0c0d-444b-9617-1bd03d28c2d3"/>
+								<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="130" uuid="d02c3f0d-ed06-4de9-8cca-21c2346846ff">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="130" height="30" uuid="0cc0d715-3021-48ff-9a2b-046ad06b62b0"/>
+								<textElement>
+									<font size="12"/>
+								</textElement>
+								<text><![CDATA[First name]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="130" height="30" uuid="c19f5e54-6920-4ea0-95b9-75bfae53a815"/>
+								<textFieldExpression><![CDATA[$F{prenom}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="140" uuid="90861ab5-ab85-4fd9-a94c-c7058b13885c">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="140" height="30" uuid="a77ce1f2-8674-4fd2-b1b5-0f3385bf277a"/>
+								<textElement>
+									<font size="12"/>
+								</textElement>
+								<text><![CDATA[Last name]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="140" height="30" uuid="047fb578-a7e0-4c0b-b3b0-be7aaf7e6cee"/>
+								<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="220" uuid="1cc8610c-ab70-40f1-a878-c0920d73c42b">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="220" height="30" uuid="8474611c-5021-4549-9892-63cc4d9e2c59"/>
+								<textElement>
+									<font fontName="SansSerif" size="12"/>
+								</textElement>
+								<text><![CDATA[Email]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="220" height="30" uuid="a113686b-891c-476d-882c-57bfcc484a3b"/>
+								<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="560" height="20" uuid="d4ffadd3-094e-4d83-926a-5ebd5526dec2"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Alright reserved | laurentkafka123@gmail.com | monp'titcoin s.a +(509) 3792-4232]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
